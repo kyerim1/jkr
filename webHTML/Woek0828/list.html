@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{padding:0; margin:0; box-sizing: border-box;}
+        #wrap{
+           width:100%;
+           position:relative;
+        }
+        #list_wrap{
+            width:1200px;
+            position:relative;
+            margin:30px auto;
+            background:#e6e6e6;
+            padding:20px;
+            border-radius: 10px;
+        }
+        .list_top{
+            display: flex;
+            column-gap: 20px;
+            align-items: center;
+        }
+        .list_top a{
+            padding:5px 20px;
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    flex-shrink: 0;    display: inline-block;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: Noto Sans KR, 'Source Sans Pro';
+    white-space: nowrap;
+    background-color: #b63939;
+    text-decoration: none;
+        }
+
+    .list_content{
+        margin-top:15px;
+        background:#fff;
+        border-radius: 5px;
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+        padding:24px;
+    }    
+    .list_content .list_header{
+        display:flex;
+        text-align: center;
+        font-size:20px;
+        font-weight:800;
+        padding:10px 0;
+        border-bottom:1px solid #000;
+    }
+    .list_content .num{width:10%;}
+    .list_content .title{width:50%;}
+    .list_content .regDate{width:20%;}
+    .list_content .mdactive{width:20%;}
+    .list_content .list_body .item{
+        display:flex;
+        border-bottom:1px solid #aaa;
+    }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="list_wrap">
+            <div class="list_top">
+                <h2>Board List</h2>
+                <a href="/register">글쓰기</a>
+            </div>
+            <div class="list_content">
+                <div class="list_header">
+                    <div class="num">번호</div>
+                    <div class="title">제목</div>
+                    <div class="regDate">작성일</div>
+                    <div class="mdactive">수정/삭제</div>
+                </div>
+                <div class="list_body">
+                    <div class="item">
+                        <div class="num"></div>
+                        <div class="title"></div>
+                        <div class="regDate"></div>
+                        <div class="mdactive"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
