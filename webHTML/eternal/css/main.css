@@ -1,0 +1,29 @@
+#calendarBox{
+    width:90%;
+    max-width:1200px;
+    margin:20px auto;
+    position:relative;
+    display:flex;
+}
+
+.calendarLeft{
+    width:50%;
+}
+
+.calendarRight{
+    width:50%;
+}
+
+.cldTable{
+    width:100%;
+    border-collapse: collapse;
+}
+.cldTable th, .cldTable td{
+    border:1px solid #aaa;
+    text-align: center;
+    padding:5px 0;
+}
+.cldTable th{
+    background:#888;
+}
+.cldTable

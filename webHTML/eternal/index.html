@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+   
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/init.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div id="header_wrap">
+        <header id="header">
+            <div class="todayBox">
+                <h2><a href="./index.html">2023년 09월 20일</a></h2>
+            </div>
+            <div class="menuWrap">
+                <div class="selectCalendar">
+                    <input type="month" value="2023-09">
+                </div>
+
+                <div class="menu">
+                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button type="button" class="btn btn-danger" onclick="javascript:location.href='./account.html';">계좌</button>
+                        <button type="button" class="btn btn-warning" onclick="javascript:location.href='./loans.html';">대출</button>
+                        <button type="button" class="btn btn-success" onclick="javascript:location.href='./stocksAndfunds.html';">주식&펀드</button>
+                        <button type="button" class="btn btn-primary" onclick="javascript:location.href='./analysis.html';">분석</button>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+    </div>
+    <div id="content">
+        <div id="calendarBox">
+            <div class="calendarLeft">
+                <h3>현금.체크카드.계좌</h3>
+                <table class="cldTable cleft">
+                    <tr>
+                        <th class="date">일자</th>
+                        <th class="detail">내역</th>
+                        <th class="expense">지출</th>
+                        <th class="income">수입</th>
+                        <th class="large">분류</th>
+                        <th class="small">분류</th>
+                        <th class="way">결제방법</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td class="date dateTd">11일</td>
+                            <td class="detail detailTd">마트</td>
+                            <td class="expense expenseTd">25,500</td>
+                            <td class="income incomeTd"></td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">우리</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">11일</td>
+                            <td class="detail detailTd">마트</td>
+                            <td class="expense expenseTd">25,500</td>
+                            <td class="income incomeTd"></td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">우리</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">11일</td>
+                            <td class="detail detailTd">마트</td>
+                            <td class="expense expenseTd">25,500</td>
+                            <td class="income incomeTd"></td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">우리</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">11일</td>
+                            <td class="detail detailTd">마트</td>
+                            <td class="expense expenseTd">25,500</td>
+                            <td class="income incomeTd"></td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">우리</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">11일</td>
+                            <td class="detail detailTd">마트</td>
+                            <td class="expense expenseTd">25,500</td>
+                            <td class="income incomeTd"></td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">우리</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">11일</td>
+                            <td class="detail detailTd">마트</td>
+                            <td class="expense expenseTd">25,500</td>
+                            <td class="income incomeTd"></td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">우리</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="calendarRight">
+                <h3>신용카드-일시불</h3>
+                <table class="cldTable cright">
+                    <tr>
+                        <th class="date">일자</th>
+                        <th class="detail">내역</th>
+                        <th class="expense">지출</th>
+                        <th class="large">분류</th>
+                        <th class="small">분류</th>
+                        <th class="way">결제방법</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td class="date dateTd">12일</td>
+                            <td class="detail detailTd">편의점</td>
+                            <td class="expense expenseTd">323,222</td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">삼성</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">12일</td>
+                            <td class="detail detailTd">편의점</td>
+                            <td class="expense expenseTd">323,222</td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">삼성</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">12일</td>
+                            <td class="detail detailTd">편의점</td>
+                            <td class="expense expenseTd">323,222</td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">삼성</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">12일</td>
+                            <td class="detail detailTd">편의점</td>
+                            <td class="expense expenseTd">323,222</td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">삼성</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">12일</td>
+                            <td class="detail detailTd">편의점</td>
+                            <td class="expense expenseTd">323,222</td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">삼성</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>신용카드-할부</h3>
+                <table class="cldTable cright">
+                    <tr>
+                        <th class="detail">내역</th>
+                        <th class="expense">지출</th>
+                        <th class="creditCard">카드사</th>
+                        <th class="dividMonth">분할개월</th>
+                        <th class="creditCount">회차</th>
+                        <th class="remain">남은금액</th>
+                        <th class="creditTotal">총금액</th>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <td class="detail detailTd">쿠팡</td>
+                            <td class="expense expenseTd">123423</td>
+                            <td class="creditCard creditCardTd">삼성</td>
+                            <td class="dividMonth dividMonthTd">36</td>
+                            <td class="creditCount creditCountTd">12</td>
+                            <td class="remain remainTd">1008324</td>
+                            <td class="creditTotal creditTotalTd">1910000</td>
+                        </tr>
+                        <tr>
+                            <td class="detail detailTd">쿠팡</td>
+                            <td class="expense expenseTd">123423</td>
+                            <td class="creditCard creditCardTd">삼성</td>
+                            <td class="dividMonth dividMonthTd">36</td>
+                            <td class="creditCount creditCountTd">12</td>
+                            <td class="remain remainTd">1008324</td>
+                            <td class="creditTotal creditTotalTd">1910000</td>
+                        </tr>
+                        <tr>
+                            <td class="detail detailTd">쿠팡</td>
+                            <td class="expense expenseTd">123423</td>
+                            <td class="creditCard creditCardTd">삼성</td>
+                            <td class="dividMonth dividMonthTd">36</td>
+                            <td class="creditCount creditCountTd">12</td>
+                            <td class="remain remainTd">1008324</td>
+                            <td class="creditTotal creditTotalTd">1910000</td>
+                        </tr>
+                        <tr>
+                            <td class="detail detailTd">쿠팡</td>
+                            <td class="expense expenseTd">123423</td>
+                            <td class="creditCard creditCardTd">삼성</td>
+                            <td class="dividMonth dividMonthTd">36</td>
+                            <td class="creditCount creditCountTd">12</td>
+                            <td class="remain remainTd">1008324</td>
+                            <td class="creditTotal creditTotalTd">1910000</td>
+                        </tr>
+                        <tr>
+                            <td class="detail detailTd">쿠팡</td>
+                            <td class="expense expenseTd">123423</td>
+                            <td class="creditCard creditCardTd">삼성</td>
+                            <td class="dividMonth dividMonthTd">36</td>
+                            <td class="creditCount creditCountTd">12</td>
+                            <td class="remain remainTd">1008324</td>
+                            <td class="creditTotal creditTotalTd">1910000</td>
+                        </tr>
+                        <tr>
+                            <td class="detail detailTd">쿠팡</td>
+                            <td class="expense expenseTd">123423</td>
+                            <td class="creditCard creditCardTd">삼성</td>
+                            <td class="dividMonth dividMonthTd">36</td>
+                            <td class="creditCount creditCountTd">12</td>
+                            <td class="remain remainTd">1008324</td>
+                            <td class="creditTotal creditTotalTd">1910000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="loansBox">
+            <table class="loansTable">
+                <tr>
+                    <th class="loansDate">일자</th>
+                    <th class="loansBank">금융사</th>
+                    <th class="loansPayment">결제금</th>
+                    <th class="loansCount">회차</th>
+                    <th class="loansAccount">출금계좌</th>
+                    <th class="loansBalance">잔액</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td class="loansDate">12일</td>
+                        <td class="loansBank">NH</td>
+                        <td class="loansPayment">224,355</td>
+                        <td class="loansCount">3</td>
+                        <td class="loansAccount">카카오</td>
+                        <td class="loansBalance">2,344,354</td>
+                    </tr>
+                    <tr>
+                        <td class="loansDate">12일</td>
+                        <td class="loansBank">NH</td>
+                        <td class="loansPayment">224,355</td>
+                        <td class="loansCount">3</td>
+                        <td class="loansAccount">카카오</td>
+                        <td class="loansBalance">2,344,354</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+        <div id="totalAccountBox">
+            <div class="totalAccount">
+                <div class="totalExpense">
+                    <h3>지출합계</h3>
+                    <ul>
+                        <li>우리카드</li>
+                        <li>삼성카드</li>
+                        <li>카카오</li>
+                        <li>우리</li>
+                    </ul>
+                    <ul>
+                        <li>419,236</li>
+                        <li>621,054</li>
+                        <li>2,305,435</li>
+                        <li>843,958</li>
+                    </ul>
+                    <ul>
+                        <li>지출 총 합계</li>
+                        <li>수입 총 합계</li>
+                        <li>남은 금액</li>
+                    </ul>
+                    <ul>
+                        <li>2,304,295</li>
+                        <li>6,784,493</li>
+                        <li>3,456,123</li>
+                    </ul>
+                </div>
+                <div class="nowInvestment">
+                    <h3>투자</h3>
+                    <ul>
+                        <li>적금</li>
+                        <li>펀드</li>
+                        <li>청약</li>
+                    </ul>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="nowBalanse">
+                    <h3>현재 잔액</h3>
+                    <ul>
+                        <li>우리은행</li>
+                        <li>카카오</li>
+                        <li>총 자산</li>
+                    </ul>
+                    <ul>
+                        <li>1,239,435</li>
+                        <li>2,360,070</li>
+                        <li>3,777,812</li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div id="foot_wrap">
+        <footer></footer>
+    </div>
+</body>
+</html>
