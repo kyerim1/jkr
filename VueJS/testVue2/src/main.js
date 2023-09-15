@@ -5,12 +5,30 @@ import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
+import firebase from 'firebase'
+import VueSession from 'vue-session/index.js'
+
+var sessionOptions={
+  persist:true
+}
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyAWHOW-US4jKBcLLtczKEFyZ2SBg6BZzPc",
+    authDomain: "iloveschool-f6efc.firebaseapp.com",
+    projectId: "iloveschool-f6efc",
+    storageBucket: "iloveschool-f6efc.appspot.com",
+    messagingSenderId: "70645106048",
+    appId: "1:70645106048:web:078502189019f67bf0ad65",
+    measurementId: "G-4TRGP0LV75"
+  };
+
+  firebase.initializeApp(firebaseConfig)
 
 const app = createApp(App)
 
+app.use(VueSession, sessionOptions)
 app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
-//https://wildeveloperetrain.tistory.com/161
-//https://velog.io/@wooryung/Vue-3-Vite%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-Vue.js-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0
