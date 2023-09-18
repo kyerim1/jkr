@@ -23,8 +23,8 @@
 
                 <div class="menu">
                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-danger" onclick="javascript:location.href='./account.html';">계좌</button>
-                        <button type="button" class="btn btn-warning" onclick="javascript:location.href='./loans.html';">대출</button>
+                        <button type="button" class="btn btn-warning" onclick="javascript:location.href='./account.html';">계좌</button>
+                        <button type="button" class="btn btn-danger" onclick="javascript:location.href='./loans.html';">대출</button>
                         <button type="button" class="btn btn-success" onclick="javascript:location.href='./stocksAndfunds.html';">주식&펀드</button>
                         <button type="button" class="btn btn-primary" onclick="javascript:location.href='./analysis.html';">분석</button>
                     </div>
@@ -38,7 +38,7 @@
             <div class="calendarLeft">
                 <h3>현금.체크카드.계좌</h3>
                 <table class="cldTable cleft">
-                    <tr>
+                    <thead><tr>
                         <th class="date">일자</th>
                         <th class="detail">내역</th>
                         <th class="expense">지출</th>
@@ -46,8 +46,35 @@
                         <th class="large">분류</th>
                         <th class="small">분류</th>
                         <th class="way">결제방법</th>
-                    </tr>
+                    </tr></thead>
                     <tbody>
+                        <tr>
+                            <td class="date dateTd">11일</td>
+                            <td class="detail detailTd">마트</td>
+                            <td class="expense expenseTd">25,500</td>
+                            <td class="income incomeTd"></td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">우리</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">11일</td>
+                            <td class="detail detailTd">마트</td>
+                            <td class="expense expenseTd">\9,825,500원</td>
+                            <td class="income incomeTd"></td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">우리</td>
+                        </tr>
+                        <tr>
+                            <td class="date dateTd">11일</td>
+                            <td class="detail detailTd">마트</td>
+                            <td class="expense expenseTd">25,500</td>
+                            <td class="income incomeTd"></td>
+                            <td class="large largeTd">식비</td>
+                            <td class="small smallTd">외식</td>
+                            <td class="way wayTd">우리</td>
+                        </tr>
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
@@ -108,15 +135,15 @@
             </div>
             <div class="calendarRight">
                 <h3>신용카드-일시불</h3>
-                <table class="cldTable cright">
-                    <tr>
+                <table class="cldTable creditFull">
+                    <thead><tr>
                         <th class="date">일자</th>
                         <th class="detail">내역</th>
                         <th class="expense">지출</th>
                         <th class="large">분류</th>
                         <th class="small">분류</th>
                         <th class="way">결제방법</th>
-                    </tr>
+                    </tr></thead>
                     <tbody>
                         <tr>
                             <td class="date dateTd">12일</td>
@@ -161,17 +188,17 @@
                     </tbody>
                 </table>
 
-                <h3>신용카드-할부</h3>
-                <table class="cldTable cright">
-                    <tr>
+                <h3 class="creditDivisionTitle" id="creditDivAdd">신용카드-할부</h3>
+                <table class="cldTable creditDivision">
+                    <thead><tr>
                         <th class="detail">내역</th>
                         <th class="expense">지출</th>
                         <th class="creditCard">카드사</th>
-                        <th class="dividMonth">분할개월</th>
+                        <th class="dividMonth">분할</th>
                         <th class="creditCount">회차</th>
                         <th class="remain">남은금액</th>
                         <th class="creditTotal">총금액</th>
-                    </tr>
+                    </tr></thead>
                     <tbody>
                         <tr>
                             <td class="detail detailTd">쿠팡</td>
@@ -233,15 +260,16 @@
         </div>
 
         <div id="loansBox">
+            <h3 id="loansAdd">대출</h3>
             <table class="loansTable">
-                <tr>
+                <thead><tr>
                     <th class="loansDate">일자</th>
                     <th class="loansBank">금융사</th>
                     <th class="loansPayment">결제금</th>
                     <th class="loansCount">회차</th>
                     <th class="loansAccount">출금계좌</th>
                     <th class="loansBalance">잔액</th>
-                </tr>
+                </tr></thead>
                 <tbody>
                     <tr>
                         <td class="loansDate">12일</td>
@@ -268,24 +296,24 @@
             <div class="totalAccount">
                 <div class="totalExpense">
                     <h3>지출합계</h3>
-                    <ul>
+                    <ul class="totalTitle">
                         <li>우리카드</li>
                         <li>삼성카드</li>
                         <li>카카오</li>
                         <li>우리</li>
                     </ul>
-                    <ul>
+                    <ul class="totalMoney">
                         <li>419,236</li>
                         <li>621,054</li>
                         <li>2,305,435</li>
                         <li>843,958</li>
                     </ul>
-                    <ul>
+                    <ul class="totalTitle">
                         <li>지출 총 합계</li>
                         <li>수입 총 합계</li>
                         <li>남은 금액</li>
                     </ul>
-                    <ul>
+                    <ul class="totalMoney">
                         <li>2,304,295</li>
                         <li>6,784,493</li>
                         <li>3,456,123</li>
@@ -293,25 +321,25 @@
                 </div>
                 <div class="nowInvestment">
                     <h3>투자</h3>
-                    <ul>
+                    <ul class="totalTitle">
                         <li>적금</li>
                         <li>펀드</li>
                         <li>청약</li>
                     </ul>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="totalMoney">
+                        <li>0</li>
+                        <li>0</li>
+                        <li>0</li>
                     </ul>
                 </div>
                 <div class="nowBalanse">
-                    <h3>현재 잔액</h3>
-                    <ul>
+                    <h3>잔액</h3>
+                    <ul class="totalTitle">
                         <li>우리은행</li>
                         <li>카카오</li>
                         <li>총 자산</li>
                     </ul>
-                    <ul>
+                    <ul class="totalMoney">
                         <li>1,239,435</li>
                         <li>2,360,070</li>
                         <li>3,777,812</li>
@@ -325,3 +353,143 @@
     </div>
 </body>
 </html>
+
+<script>
+    var hg=$(".totalExpense li").eq(0).outerHeight();
+    $(".totalExpense>h3").css("line-height",(hg*4-2)+"px");
+
+    hg = $(".nowInvestment li").eq(0).outerHeight();
+    $(".nowInvestment>h3").css("line-height",(hg*3-2)+"px");
+
+    hg = $(".nowBalanse li").eq(0).outerHeight();
+    $(".nowBalanse>h3").css("line-height",(hg*3-2)+"px");
+
+
+    $(".cleft tbody").append(
+   ` <tr id="bankInput">
+        <td class="date dateTd dateInput">
+            <input type="number" name="bankdate" id="bankdate">
+        </td>
+        <td class="detail detailTd detailInput">
+            <input type="text" name="bankdetail" id="bankdetail">
+        </td>
+        <td class="expense expenseTd expenseInput">
+            <input type="number" name="bankexpense" id="bankexpense" value="0">
+        </td>
+        <td class="income incomeTd incomeInput">
+            <input type="number" name="bankincome" id="bankincome" value="0">
+        </td>
+        <td class="large largeTd largeInput">
+            <input type="text" name="bankcate1" id="bankcate1">
+        </td>
+        <td class="small smallTd smallInput">
+            <input type="text" name="bankcate2" id="bankcate2">
+        </td>
+        <td class="way wayTd wayInput">
+            <input type="text" name="bankway" id="bankway">
+        </td>
+    </tr>`
+    );
+    $(".creditFull tbody").append(
+`                        <tr id="creditInput">
+                            <td class="date dateTd dateInput">
+                                <input type="number" name="creditdate" id="creditdate">
+                            </td>
+                            <td class="detail detailTd detailInput">
+                                <input type="text" name="creditdetail" id="creditdetail">
+                            </td>
+                            <td class="expense expenseTd expenseInput">
+                                <input type="number" name="creditexpense" id="creditexpense" value="0">
+                            </td>
+                            <td class="large largeTd largeInput">
+                                <input type="text" name="creditcate1" id="creditcate1">
+                            </td>
+                            <td class="small smallTd smallInput">
+                                <input type="text" name="creditcate2" id="creditcate2">
+                            </td>
+                            <td class="way wayTd wayInput">
+                                <input type="text" name="creditway" id="creditway">
+                            </td>
+                        </tr>`
+    );
+
+    $("#bankInput").on("keyup",function(e){
+        if(e.keyCode == 13){
+            alert("aa");
+        }
+    });
+    $("#creditInput").on("keyup",function(e){
+        if(e.keyCode == 13){
+            alert("카드");
+        }
+    });
+
+    $("#creditDivAdd").on("click",function(){
+        if( $(".creditDivision tbody").find("#creditD").length ==0 ){
+            $(".creditDivision tbody").append(
+                `<tr id="creditD">
+                    <td class="detail detailTd">
+                        <input type="text" name="creditDdetail" id="creditDdetail">
+                    </td>
+                    <td class="expense expenseTd">
+                        <input type="number" name="creditDexpense" id="creditDexpense" value="0">
+                    </td>
+                    <td class="creditCard creditCardTd">
+                        <input type="text" name="creditDcard" id="creditDcard">
+                    </td>
+                    <td class="dividMonth dividMonthTd">
+                        <input type="number" name="creditDmonth" id="creditDmonth">
+                    </td>
+                    <td class="creditCount creditCountTd">
+                        <input type="number" name="creditDcount" id="creditDcount">
+                    </td>
+                    <td class="remain remainTd">
+                        <input type="number" name="creditDremain" id="creditDmain">
+                    </td>
+                    <td class="creditTotal creditTotalTd">
+                        <input type="number" name="creditDtotal" id="creditDtotal">
+                    </td>
+                </tr>`
+            );
+            $("#creditD").on("keyup",function(e){
+                if(e.keyCode == 13){
+                    alert("카드분할");
+                }
+            });
+        };
+
+    });
+
+    $("#loansAdd").on("click",function(){
+        if( $(".loansTable tbody").find("#loansInput").length ==0 ){
+            $(".loansTable tbody").append(
+                `<tr id="loansInput">
+                    <td class="loansDate">
+                        
+                    </td>
+                    <td class="loansBank">
+                        
+                    </td>
+                    <td class="loansPayment">
+                        
+                    </td>
+                    <td class="loansCount">
+                        
+                    </td>
+                    <td class="loansAccount">
+                        
+                    </td>
+                    <td class="loansBalance">
+                        
+                    </td>
+                </tr>`
+            );
+            $("#loansInput").on("keyup",function(e){
+                if(e.keyCode == 13){
+                    alert("카드분할");
+                }
+            });
+        };
+    });
+
+</script>

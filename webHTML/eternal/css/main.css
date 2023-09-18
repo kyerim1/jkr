@@ -5,7 +5,7 @@
     position:relative;
     display:flex;
 }
-
+#calendarBox h3{padding-left:20px;}
 .calendarLeft{
     width:50%;
 }
@@ -23,7 +23,105 @@
     text-align: center;
     padding:5px 0;
 }
+.cldTable td{font-size:13px;}
 .cldTable th{
-    background:#888;
+    background:#ffc720;
+    color:#000;
 }
-.cldTable
+.cldTable .date{width:8%;}
+.cldTable .detail{width:20%;}
+.cldTable .expense{width:20%;}
+.cldTable .income{width:20%;}
+.cldTable .large{width:10%;}
+.cldTable .small{width:10%;}
+.cldTable .way{width:12%;}
+
+.calendarRight .creditDivisionTitle{margin-top:20px;}
+.creditDivision .detail{width:15%;}
+.creditDivision .expense{width:18%;}
+.creditDivision .creditCard{width:9%}
+.creditDivision .dividMonth{width:9%;}
+.creditDivision .creditCount{width:9%;}
+.creditDivision .remain{width:20%;}
+.creditDivision .creditTotal{width:20%;}
+
+#calendarBox input{width:95%;margin:0 auto; padding-left:3px;}
+
+
+
+#loansBox{
+    width:90%;
+    max-width:1200px;
+    margin:20px auto;
+    position:relative;
+}
+#loansBox h3{padding-left:20px;}
+.loansTable{
+    width:100%;
+    border-collapse: collapse;
+}
+.loansTable th, .loansTable td{
+    border:1px solid #aaa;
+    text-align: center;
+    padding:5px 0;
+}
+.loansTable th{
+    background:#dc3545;
+}
+
+#totalAccountBox{
+    width:90%;
+    max-width:1200px;
+    margin:20px auto;
+    position:relative;
+}
+.totalAccount{
+    width:100%;
+    position:relative;
+    display:flex;
+    align-items: start;
+}
+.totalAccount h3{
+    background:#0d6efd;
+    border:1px solid #ccc;
+    margin:0;
+}
+.totalAccount ul li{
+    border:1px solid #ccc;
+    padding:3px 0;
+}
+.totalExpense{
+    display:flex;
+    width:50%;text-align: center;
+}
+.totalExpense h3{    width:20%; }
+.totalExpense .totalTitle{    width:20%;}
+.totalExpense .totalMoney{ width:20%; text-align: right; }
+.totalExpense .totalMoney li{    padding-right:5px; }
+
+.nowInvestment{
+    display:flex;
+    width:25%;text-align: center;
+}
+.nowInvestment h3{    width:30%;}
+.nowInvestment .totalTitle{    width:30%;}
+.nowInvestment .totalMoney{ width:40%; text-align: right; }
+.nowInvestment .totalMoney li{    padding-right:5px; }
+
+
+.nowBalanse{
+    display:flex;
+    width:25%;text-align: center; 
+}
+.nowBalanse h3{    width:30%;}
+.nowBalanse .totalTitle{   width:30%;}
+.nowBalanse .totalMoney{ width:40%; text-align: right; }
+.nowBalanse .totalMoney li{    padding-right:5px; }
+
+
+
+
+
+#foot_wrap{
+    margin-top:50px;
+}
