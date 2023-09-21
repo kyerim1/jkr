@@ -1,3 +1,4 @@
+
 #calendarBox{
     width:90%;
     max-width:1200px;
@@ -5,7 +6,7 @@
     position:relative;
     display:flex;
 }
-#calendarBox h3{padding-left:20px;}
+#calendarBox h3{padding-left:20px;cursor: pointer;}
 .calendarLeft{
     width:50%;
 }
@@ -23,10 +24,11 @@
     text-align: center;
     padding:5px 0;
 }
-.cldTable td{font-size:13px;}
+.cldTable td{font-size:0.8em;}
 .cldTable th{
     background:#ffc720;
     color:#000;
+    font-size:1em;
 }
 .cldTable .date{width:8%;}
 .cldTable .detail{width:20%;}
@@ -55,7 +57,7 @@
     margin:20px auto;
     position:relative;
 }
-#loansBox h3{padding-left:20px;}
+#loansBox h3{padding-left:20px; cursor: pointer;}
 .loansTable{
     width:100%;
     border-collapse: collapse;
@@ -67,6 +69,12 @@
 }
 .loansTable th{
     background:#dc3545;
+}
+.loansTable input{padding-left:3px;}
+.loansTable input::-webkit-outer-spin-button,
+.loansTable input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 #totalAccountBox{
@@ -85,6 +93,9 @@
     background:#0d6efd;
     border:1px solid #ccc;
     margin:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 .totalAccount ul li{
     border:1px solid #ccc;
@@ -124,4 +135,26 @@
 
 #foot_wrap{
     margin-top:50px;
+}
+
+
+
+@media screen and (max-width:1210px){
+    #content{
+        font-size:12px;
+    }
+}
+@media screen and (max-width:900px){
+    #calendarBox{
+        flex-direction: column;
+    }
+    #content{
+        font-size:16px;
+    }
+    .calendarLeft{
+        width:100%;
+    }
+    .calendarRight{
+        width:100%;
+    }
 }
