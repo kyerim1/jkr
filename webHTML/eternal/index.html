@@ -355,15 +355,6 @@
 </html>
 
 <script>
-    var hg=$(".totalExpense li").eq(0).outerHeight();
-    $(".totalExpense>h3").css("line-height",(hg*4-2)+"px");
-
-    hg = $(".nowInvestment li").eq(0).outerHeight();
-    $(".nowInvestment>h3").css("line-height",(hg*3-2)+"px");
-
-    hg = $(".nowBalanse li").eq(0).outerHeight();
-    $(".nowBalanse>h3").css("line-height",(hg*3-2)+"px");
-
 
     $(".cleft tbody").append(
    ` <tr id="bankInput">
@@ -456,7 +447,9 @@
                     alert("카드분할");
                 }
             });
-        };
+        }else{
+            $("#creditD").remove();
+        }
 
     });
 
@@ -465,22 +458,22 @@
             $(".loansTable tbody").append(
                 `<tr id="loansInput">
                     <td class="loansDate">
-                        
+                        <input type="number" name="loandate" id="loandate">
                     </td>
                     <td class="loansBank">
-                        
+                        <input type="text" name="loanbank" id="loanbank">
                     </td>
                     <td class="loansPayment">
-                        
+                        <input type="number" name="loanpayment" id="loanpayment" value="0">
                     </td>
                     <td class="loansCount">
-                        
+                        <input type="number" name="loancount" id="loancount">
                     </td>
                     <td class="loansAccount">
-                        
+                        <input type="text" name="loanaccount" id="loanaccount">
                     </td>
                     <td class="loansBalance">
-                        
+                        <input type="number" name="loanbalance" id="loanbalance" value="0">
                     </td>
                 </tr>`
             );
@@ -489,7 +482,9 @@
                     alert("카드분할");
                 }
             });
-        };
+        }else{
+            $("#loansInput").remove();
+        }
     });
 
 </script>
