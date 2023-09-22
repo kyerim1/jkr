@@ -1,0 +1,50 @@
+
+#assetsReg{
+    width:90%;
+    max-width:1200px;
+    margin:20px auto;
+    position:relative;
+    display:flex;
+    justify-content: space-between;
+}
+.line{
+    position:absolute;
+    left:161.5px;
+    top:0;
+    width:115px;
+}
+.myassets{
+    width:27%;
+}
+.myassets h3{height:35px;}
+.assetsTb{
+    width:100%;
+    border-collapse: collapse;
+    
+}
+.assetsTb tbody{
+    position:relative;
+}
+.assetsTb th, .assetsTb td{
+    border:1px solid #aaa;
+    text-align: center;
+    padding:5.5px 0;
+    
+}
+
+.assetsTb tfoot td input{
+    width:95%;margin:0 auto; padding-left:3px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:800px){
+    #assetsReg{
+        flex-direction: column;
+    }
+}

@@ -8,6 +8,8 @@
    
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/init.css">
+    <link rel="stylesheet" href="./css/account.css">
+    <script src="./js/account.js"></script>
 </head>
 <body>
     <div id="header_wrap">
@@ -30,45 +32,95 @@
         </header>
     </div>
     <div id="content">
-        <div class="myassets">
-            <h3 claa="assetsTitle">체크카드</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>카드명</th>
-                        <th>연결계좌</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-                <tfoot></tfoot>
-            </table>
-        </div>
-        <div class="myassets">
-            <h3 claa="assetsTitle">은행</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>은행</th>
-                        <th>잔액</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-                <tfoot></tfoot>
-            </table>
-        </div>
-        <div class="myassets">
-            <h3 claa="assetsTitle">신용카드</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>카드사</th>
-                        <th>연결계좌</th>
-                        <th>결제일</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-                <tfoot></tfoot>
-            </table>
+        <div id="assetsReg">
+            
+            <div class="myassets">
+                <h3 class="assetsTitle">체크카드</h3>
+                <table class="checkTb assetsTb">
+                    <thead>
+                        <tr>
+                            <th>카드명</th>
+                            <th>연결계좌</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>우리카드</td>
+                            <td>우리은행<svg class="line">
+                                <line x1="0" y1="16" x2="115"  y2="16"  fill="none" stroke="#6798FD" stroke-width="3"></polyline>
+                            </svg></td>
+                            
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr id="checkInput">
+                            <td>
+                                <input type="text" name="checkcard" id="checkcard">
+                            </td>
+                            <td>
+                                <input type="text" name="linkbank1" id="linkbank1">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="myassets">
+                <h3 class="assetsTitle">은행</h3>
+                <table class="bankTb assetsTb">
+                    <thead>
+                        <tr>
+                            <th>은행</th>
+                            <th>잔액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="우리은행">
+                            <td>우리은행</td>
+                            <td>93,000</td>
+                        </tr>
+                        <tr id="카카오뱅크">
+                            <td>카카오뱅크</td>
+                            <td>93,000</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr id="bankInput">
+                            <td>
+                                <input type="text" name="bank" id="bank">
+                            </td>
+                            <td>
+                                <input type="nuber" name="money" id="money">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="myassets">
+                <h3 class="assetsTitle">신용카드</h3>
+                <table class="creditTb assetsTb">
+                    <thead>
+                        <tr>
+                            <th>카드사</th>
+                            <th>연결계좌</th>
+                            <th>결제일</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr id="creditInput">
+                            <td>
+                                <input type="text" name="creditcard" id="creditcard">
+                            </td>
+                            <td>
+                                <input type="text" name="linkbank2" id="linkbank2">
+                            </td>
+                            <td>
+                                <input type="number" name="paymentday" id="paymentday">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
     </div>
     <div id="foot_wrap">

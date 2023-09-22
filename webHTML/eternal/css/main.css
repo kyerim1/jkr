@@ -70,18 +70,14 @@
 .loansTable th{
     background:#dc3545;
 }
-<<<<<<< HEAD
 .loansTable input{width:95%;margin:0 auto; padding-left:3px;}
 
-=======
 .loansTable input{padding-left:3px;}
 .loansTable input::-webkit-outer-spin-button,
 .loansTable input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
->>>>>>> 8dacdfe8383f84d7e653d11f8ae1e593fe87913c
-
 #totalAccountBox{
     width:90%;
     max-width:1200px;
