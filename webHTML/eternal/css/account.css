@@ -9,9 +9,10 @@
 }
 .line{
     position:absolute;
-    left:161.5px;
+    left:100%;
     top:0;
     width:115px;
+    
 }
 .myassets{
     width:27%;
@@ -23,7 +24,7 @@
     
 }
 .assetsTb tbody{
-    position:relative;
+    
 }
 .assetsTb th, .assetsTb td{
     border:1px solid #aaa;
@@ -36,7 +37,11 @@
     width:95%;margin:0 auto; padding-left:3px;
 }
 
-
+.linePoint1{
+    display:flex;
+    position:relative;
+    
+}
 
 
 

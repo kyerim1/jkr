@@ -62,13 +62,15 @@ function bankAdd(data){
 }
 function checkAdd(data){
     var index = $(".bankTb").find("#"+data['linkbank']).index();
-    
+    var len = $(".checkTb>tbody>tr").length;
+    len= ( len*32-(index*32) )*(index+1 <= len ? -1: 1);
+    console.log(len);
     $(".checkTb>tbody").append(
         ` <tr>
         <td>${data['checkcard']}</td>
-        <td>${data['linkbank']}
-        <svg class="line">
-            <line x1="0" y1="16" x2="115"  y2="16"  fill="none" stroke="#6798FD" stroke-width="3"></polyline>
+        <td class='linePoint1'>${data['linkbank']}
+        <svg class="line" style='top:${len}'>
+            <line x1="0" y1="16" x2="108"  y2="${16+len}"  fill="none" stroke="#6798FD" stroke-width="3"></polyline>
         </svg></td>
         
         </tr>`
