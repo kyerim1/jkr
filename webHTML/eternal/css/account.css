@@ -32,7 +32,9 @@
     width:95%;margin:0 auto; padding-left:3px;
 }
 
-
+.bankTb tbody .currency::before{
+    content:"\\";
+}
 
 
 

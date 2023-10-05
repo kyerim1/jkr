@@ -4,6 +4,8 @@ let valText=new Array();
 $(function(){
 
 
+
+
     $("#checkInput").on("keyup",function(e){
         if(e.keyCode == 13){
             var jdata = {'checkcard':$("#checkcard").val()  , 'linkbank':$("#linkbank1").val()  };
@@ -32,6 +34,7 @@ $(function(){
             if(  $(".myassets").find(".change").length>1  ){
                 for(var i=0; i<$(".change").length; i++){
                     $(".change").eq(i).text(valText[i]);
+                    if( $(".change").eq(i).hasClass("currencyActive"))$(".change").eq(i).addClass("currency");
                 }
                 valText=[];
                 $(".change").removeClass("change");
@@ -46,28 +49,32 @@ $(function(){
 
 function valueChange(){
     if( $(".myassets").find(".change").length>1 ) return;
-        var n =["Re1","Re2","Re3"];
-        
-        for( var i=0;i<$(this).children(0).length;i++){
+        var n ={bankTb:["bankRe","moneyRe"], checkTb:["checkRe","linkbankRe"], creditTb:["creditRe","linkbankRe","paymentRe"]};
+        var p = $(this).parents()[1].className.split(" ")[0];
+        for( var i in n[p]){
             $(this).children(0).eq(i).addClass("change");
             var text = $(this).children(0).eq(i).text();
             valText.push(text);
             $(this).children(0).eq(i).empty();
             var reType="text";
-            if( !isNaN(parseInt(text.substr(1)))){
-                text = Number(text.substr(1).replace(/,/g,""));
+            if( !isNaN(parseInt(text))){
+                text = Number(text.replace(/,/g,""));
                 reType="number";
             }
-            $(this).children(0).eq(i).append(`<input type="${reType}" id="${n[i]}" value="${text}">`);
+            if($(this).children(0).eq(i).hasClass("currencyActive"))$(this).children(0).eq(i).removeClass("currency");
+            $(this).children(0).eq(i).append(`<input type="${reType}" id="${n[p][i]}" value="${text}">`);
         }
+
         $(".change").on("keyup",function(e){
             if(e.keyCode == 13){
-                var n =["Re1","Re2","Re3"];
-                for(var i=0; i<$(".change").length; i++){
-                    var val = $(".change").find("#"+n[i]).val();
+                var n ={bankTb:["bankRe","moneyRe"], checkTb:["checkRe","linkbankRe"], creditTb:["creditRe","linkbankRe","paymentRe"]};
+                var p= $(this).parents()[2].className.split(" ")[0];
+                for(var i in n[p]){
+                    var val = $(".change").find("#"+n[p][i]).val();
                     if( !isNaN(val) ){
-                        val = "\\"+parseInt(val).toLocaleString();
+                        val = parseInt(val).toLocaleString();
                     }
+                    if( $(".change").eq(i).hasClass("currencyActive"))$(".change").eq(i).addClass("currency");
                     $(".change").eq(i).text(val);
                 }
                 valText=[];
