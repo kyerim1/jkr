@@ -1,0 +1,121 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+#wrap{
+    width:1200px;
+    position:absolute;
+    right:20px;
+}
+
+#board{
+    width:100%;
+    padding:50px 0;
+    display:grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: auto;
+}
+
+.zone{
+    border:1px solid white;
+    background:rgb(98 164 255);
+}
+.top{ height:200px;}
+
+.left, .right{width:200px; height:100px;}
+
+.bottom{ height:200px;}
+
+.zone:nth-child(1), .zone:nth-child(9),
+.zone:nth-child(32), .zone:nth-child(24){
+    width:200px; height:200px;
+}
+.center{
+    grid-row: 2/9;
+    grid-column:2/9 ;
+}
+.top{
+    display:flex;
+    flex-direction: column;
+}
+.top .zone_color{ 
+    order:2; height:50px;
+}
+.top .zone_name{
+    order:1;
+    height:calc(100% - 50px);
+    border-bottom:1px solid black;
+}
+.left{ display:flex; }
+.left .zone_color{  order:2; width:50px; }
+.left .zone_name{
+    order:1; width:calc(100% - 50px);
+    border-right:1px solid black;
+}
+.right{display:flex;}
+.right .zone_color{width:50px;}
+.right .zone_name{ width:calc(100% - 50px);  border-left:1px solid black;}
+
+.bottom .zone_color{height:50px;}
+.bottom .zone_name{height:calc(100% - 50px);
+border-top:1px solid black;}
+
+
+.center{
+    background: url("../images/중앙.jpg") no-repeat center;
+    background-size:cover;
+}
+
+.zone .zone_name{
+    font-size:35px;
+    font-weight:700;
+    font-family: "휴먼매직체";
+    color:#fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 게임 플레이어 설정및 현황판 */
+#game_player{
+    position:fixed;
+    top:100px;
+    left:20px;
+    background:rgba(230,230,230,0.7);
+    z-index:1000;
+    border-radius: 10px;
+    padding:15px;
+}
+
+#set_player{
+    width:200px;
+}
+.pn{ padding:5px; width:100%;}
+.pn input[type=range]{
+    width:150px;
+    background:green;
+    border-radius: 10px;
+}
+.pn input[type=range]::-webkit-slider-thumb{
+/* 슬라이더 모양 변경 - 슬라이더 값설정 스위치  */
+    -webkit-appearance: none;
+    height:25px;
+    border:2px solid #223355;
+    width:20px;
+    border-radius: 20px;
+    background:orange;
+}
+.pn input[type=range]::-webkit-slider-runnable-track{
+    background:blue;
+    border-radius: 20px;
+}
+
+#enroll{
+    float:right;
+    font-size:20px;
+    padding:3px 10px;
+}

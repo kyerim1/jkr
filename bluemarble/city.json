@@ -1,0 +1,34 @@
+[
+    {"name":"복지기금","purchase":0,"owner":"","color":"#FFBB00","func":"","back":"복지기금.jpg"}
+    ,{"name":"화성","purchase":25,"owner":"","color":"#FFBB00","func":"","back":""}
+    ,{"name":"성남","purchase":27,"owner":"","color":"#FFBB00","func":"","back":""}
+    ,{"name":"창원","purchase":26,"owner":"","color":"#FFBB00","func":"","back":""}
+    ,{"name":"제주","purchase":34,"owner":"","color":"#FFBB00","func":"","back":""}
+    ,{"name":"용인","purchase":28,"owner":"","color":"#FFBB00","func":"","back":""}
+    ,{"name":"수원","purchase":27,"owner":"","color":"#FFBB00","func":"","back":""}
+    ,{"name":"울산","purchase":39,"owner":"","color":"#FFBB00","func":"","back":""}
+    ,{"name":"인천공항","purchase":0,"owner":"","color":"#121212","func":"","back":"인천공항.jpg"}
+    ,{"name":"청주","purchase":16,"owner":"","color":"#53C14B","func":"","back":""}
+    ,{"name":"광주","purchase":42,"owner":"","color":"#121212","func":"","back":""}
+    ,{"name":"부천","purchase":20,"owner":"","color":"#53C14B","func":"","back":""}
+    ,{"name":"대구","purchase":45,"owner":"","color":"#121212","func":"","back":""}
+    ,{"name":"남양주","purchase":19,"owner":"","color":"#53C14B","func":"","back":""}
+    ,{"name":"인천","purchase":48,"owner":"","color":"#121212","func":"","back":""}
+    ,{"name":"포항","purchase":27,"owner":"","color":"#53C14B","func":"","back":""}
+    ,{"name":"복지기금납부","purchase":0,"owner":"","color":"#121212","func":"","back":""}
+    ,{"name":"천안","purchase":21,"owner":"","color":"#53C14B","func":"","back":""}
+    ,{"name":"부산","purchase":52,"owner":"","color":"#121212","func":"","back":""}
+    ,{"name":"전주","purchase":20,"owner":"","color":"#53C14B","func":"","back":""}
+    ,{"name":"서울","purchase":80,"owner":"","color":"#121212","func":"","back":""}
+    ,{"name":"안산","purchase":22,"owner":"","color":"#53C14B","func":"","back":""}
+    ,{"name":"대전","purchase":120,"owner":"","color":"#121212","func":"","back":""}
+    ,{"name":"무인도","purchase":0,"owner":"","color":"#53C14B","func":"","back":"무인도.jpg"}
+    ,{"name":"안양","purchase":12,"owner":"","color":"#FF2424","func":"","back":""}
+    ,{"name":"김해","purchase":10,"owner":"","color":"#FF2424","func":"","back":""}
+    ,{"name":"평택","purchase":15,"owner":"","color":"#FF2424","func":"","back":""}
+    ,{"name":"시흥","purchase":12,"owner":"","color":"#FF2424","func":"","back":""}
+    ,{"name":"파주","purchase":9,"owner":"","color":"#FF2424","func":"","back":""}
+    ,{"name":"의정부","purchase":9,"owner":"","color":"#FF2424","func":"","back":""}
+    ,{"name":"김포","purchase":7,"owner":"","color":"#FF2424","func":"","back":""}
+    ,{"name":"출발","purchase":0,"owner":"","color":"#FF2424","func":"","back":"출발.jpg"}
+]
