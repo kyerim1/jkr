@@ -51,8 +51,8 @@
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
-                            <td class="expense expenseTd">25,500</td>
-                            <td class="income incomeTd"></td>
+                            <td class="expense expenseTd currency">25,500</td>
+                            <td class="income incomeTd currency"></td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">우리</td>
@@ -60,8 +60,8 @@
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
-                            <td class="expense expenseTd">\9,825,500원</td>
-                            <td class="income incomeTd"></td>
+                            <td class="expense expenseTd currency">\9,825,500원</td>
+                            <td class="income incomeTd currency"></td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">우리</td>
@@ -69,8 +69,8 @@
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
-                            <td class="expense expenseTd">25,500</td>
-                            <td class="income incomeTd"></td>
+                            <td class="expense expenseTd currency">25,500</td>
+                            <td class="income incomeTd currency"></td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">우리</td>
@@ -78,8 +78,8 @@
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
-                            <td class="expense expenseTd">25,500</td>
-                            <td class="income incomeTd"></td>
+                            <td class="expense expenseTd currency">25,500</td>
+                            <td class="income incomeTd currency"></td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">우리</td>
@@ -87,8 +87,8 @@
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
-                            <td class="expense expenseTd">25,500</td>
-                            <td class="income incomeTd"></td>
+                            <td class="expense expenseTd currency">25,500</td>
+                            <td class="income incomeTd currency"></td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">우리</td>
@@ -96,8 +96,8 @@
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
-                            <td class="expense expenseTd">25,500</td>
-                            <td class="income incomeTd"></td>
+                            <td class="expense expenseTd currency">25,500</td>
+                            <td class="income incomeTd currency"></td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">우리</td>
@@ -105,8 +105,8 @@
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
-                            <td class="expense expenseTd">25,500</td>
-                            <td class="income incomeTd"></td>
+                            <td class="expense expenseTd currency">25,500</td>
+                            <td class="income incomeTd currency"></td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">우리</td>
@@ -114,8 +114,8 @@
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
-                            <td class="expense expenseTd">25,500</td>
-                            <td class="income incomeTd"></td>
+                            <td class="expense expenseTd currency">25,500</td>
+                            <td class="income incomeTd currency"></td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">우리</td>
@@ -123,14 +123,42 @@
                         <tr>
                             <td class="date dateTd">11일</td>
                             <td class="detail detailTd">마트</td>
-                            <td class="expense expenseTd">25,500</td>
-                            <td class="income incomeTd"></td>
+                            <td class="expense expenseTd currency">25,500</td>
+                            <td class="income incomeTd currency"></td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">우리</td>
                         </tr>
                         
                     </tbody>
+                    <tfoot>
+                        <tr id="bankInput">
+                            <td class="date dateTd dateInput">
+                                <input type="number" th:field="*{date}">
+                            </td>
+                            <td class="detail detailTd detailInput">
+                                <input type="text" th:field="*{detail}">
+                            </td>
+                            <td class="expense expenseTd expenseInput">
+                                <input type="number" th:field="*{expense}">
+                            </td>
+                            <td class="income incomeTd incomeInput">
+                                <input type="number" th:field="*{income}">
+                            </td>
+                            <td class="large largeTd largeInput">
+                                <input type="text" th:field="*{major}">
+                            </td>
+                            <td class="small smallTd smallInput">
+                                <input type="text" th:field="*{sub}">
+                            </td>
+                            <td class="way wayTd wayInput">
+                                <select name="way" id="bankway">
+                                    <option>은행선택</option>
+                                    <option th:each="way : ${state.assets}" th:if="${not way.type.equals('credit')}" th:value="${way.name}" th:text="${way.name}"></option>
+                                </select>
+                            </td>
+                        </tr>
+                </tfoot>
                 </table>
             </div>
             <div class="calendarRight">
@@ -148,7 +176,7 @@
                         <tr>
                             <td class="date dateTd">12일</td>
                             <td class="detail detailTd">편의점</td>
-                            <td class="expense expenseTd">323,222</td>
+                            <td class="expense expenseTd currency">323,222</td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">삼성</td>
@@ -156,7 +184,7 @@
                         <tr>
                             <td class="date dateTd">12일</td>
                             <td class="detail detailTd">편의점</td>
-                            <td class="expense expenseTd">323,222</td>
+                            <td class="expense expenseTd currency">323,222</td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">삼성</td>
@@ -164,7 +192,7 @@
                         <tr>
                             <td class="date dateTd">12일</td>
                             <td class="detail detailTd">편의점</td>
-                            <td class="expense expenseTd">323,222</td>
+                            <td class="expense expenseTd currency">323,222</td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">삼성</td>
@@ -172,7 +200,7 @@
                         <tr>
                             <td class="date dateTd">12일</td>
                             <td class="detail detailTd">편의점</td>
-                            <td class="expense expenseTd">323,222</td>
+                            <td class="expense expenseTd currency">323,222</td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">삼성</td>
@@ -180,12 +208,39 @@
                         <tr>
                             <td class="date dateTd">12일</td>
                             <td class="detail detailTd">편의점</td>
-                            <td class="expense expenseTd">323,222</td>
+                            <td class="expense expenseTd currency">323,222</td>
                             <td class="large largeTd">식비</td>
                             <td class="small smallTd">외식</td>
                             <td class="way wayTd">삼성</td>
                         </tr>
                     </tbody>
+                    <tfoot>
+
+                        <tr id="creditInput">
+                            <td class="date dateTd dateInput">
+                                <input type="number" th:field="*{date}">
+                            </td>
+                            <td class="detail detailTd detailInput">
+                                <input type="text" th:field="*{detail}">
+                            </td>
+                            <td class="expense expenseTd expenseInput">
+                                <input type="number" th:field="*{expense}">
+                            </td>
+                            <td class="large largeTd largeInput">
+                                <input type="text" th:field="*{major}">
+                            </td>
+                            <td class="small smallTd smallInput">
+                                <input type="text" th:field="*{sub}">
+                            </td>
+                            <td class="way wayTd wayInput">
+                                <select name="way" id="creditway">
+                                    <option>카드선택</option>
+                                    <option th:each="way : ${state.assets}" th:if="${way.type.equals('credit')}" th:value="${way.name}" th:text="${way.name}"></option>
+                                </select>
+                            </td>
+                        </tr>
+
+                </tfoot>
                 </table>
 
                 <h3 class="creditDivisionTitle" id="creditDivAdd">신용카드-할부</h3>
@@ -356,53 +411,7 @@
 
 <script>
 
-    $(".cleft tbody").append(
-   ` <tr id="bankInput">
-        <td class="date dateTd dateInput">
-            <input type="number" name="bankdate" id="bankdate">
-        </td>
-        <td class="detail detailTd detailInput">
-            <input type="text" name="bankdetail" id="bankdetail">
-        </td>
-        <td class="expense expenseTd expenseInput">
-            <input type="number" name="bankexpense" id="bankexpense" value="0">
-        </td>
-        <td class="income incomeTd incomeInput">
-            <input type="number" name="bankincome" id="bankincome" value="0">
-        </td>
-        <td class="large largeTd largeInput">
-            <input type="text" name="bankcate1" id="bankcate1">
-        </td>
-        <td class="small smallTd smallInput">
-            <input type="text" name="bankcate2" id="bankcate2">
-        </td>
-        <td class="way wayTd wayInput">
-            <input type="text" name="bankway" id="bankway">
-        </td>
-    </tr>`
-    );
-    $(".creditFull tbody").append(
-`                        <tr id="creditInput">
-                            <td class="date dateTd dateInput">
-                                <input type="number" name="creditdate" id="creditdate">
-                            </td>
-                            <td class="detail detailTd detailInput">
-                                <input type="text" name="creditdetail" id="creditdetail">
-                            </td>
-                            <td class="expense expenseTd expenseInput">
-                                <input type="number" name="creditexpense" id="creditexpense" value="0">
-                            </td>
-                            <td class="large largeTd largeInput">
-                                <input type="text" name="creditcate1" id="creditcate1">
-                            </td>
-                            <td class="small smallTd smallInput">
-                                <input type="text" name="creditcate2" id="creditcate2">
-                            </td>
-                            <td class="way wayTd wayInput">
-                                <input type="text" name="creditway" id="creditway">
-                            </td>
-                        </tr>`
-    );
+   
 
     $("#bankInput").on("keyup",function(e){
         if(e.keyCode == 13){
