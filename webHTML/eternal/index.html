@@ -257,59 +257,89 @@
                     <tbody>
                         <tr>
                             <td class="detail detailTd">쿠팡</td>
-                            <td class="expense expenseTd">123423</td>
+                            <td class="expense expenseTd currency">123423</td>
                             <td class="creditCard creditCardTd">삼성</td>
                             <td class="dividMonth dividMonthTd">36</td>
                             <td class="creditCount creditCountTd">12</td>
-                            <td class="remain remainTd">1008324</td>
-                            <td class="creditTotal creditTotalTd">1910000</td>
+                            <td class="remain remainTd currency">1008324</td>
+                            <td class="creditTotal creditTotalTd currency">1910000</td>
                         </tr>
                         <tr>
                             <td class="detail detailTd">쿠팡</td>
-                            <td class="expense expenseTd">123423</td>
+                            <td class="expense expenseTd currency">123423</td>
                             <td class="creditCard creditCardTd">삼성</td>
                             <td class="dividMonth dividMonthTd">36</td>
                             <td class="creditCount creditCountTd">12</td>
-                            <td class="remain remainTd">1008324</td>
-                            <td class="creditTotal creditTotalTd">1910000</td>
+                            <td class="remain remainTd currency">1008324</td>
+                            <td class="creditTotal creditTotalTd currency">1910000</td>
                         </tr>
                         <tr>
                             <td class="detail detailTd">쿠팡</td>
-                            <td class="expense expenseTd">123423</td>
+                            <td class="expense expenseTd currency">123423</td>
                             <td class="creditCard creditCardTd">삼성</td>
                             <td class="dividMonth dividMonthTd">36</td>
                             <td class="creditCount creditCountTd">12</td>
-                            <td class="remain remainTd">1008324</td>
-                            <td class="creditTotal creditTotalTd">1910000</td>
+                            <td class="remain remainTd currency">1008324</td>
+                            <td class="creditTotal creditTotalTd currency">1910000</td>
                         </tr>
                         <tr>
                             <td class="detail detailTd">쿠팡</td>
-                            <td class="expense expenseTd">123423</td>
+                            <td class="expense expenseTd currency">123423</td>
                             <td class="creditCard creditCardTd">삼성</td>
                             <td class="dividMonth dividMonthTd">36</td>
                             <td class="creditCount creditCountTd">12</td>
-                            <td class="remain remainTd">1008324</td>
-                            <td class="creditTotal creditTotalTd">1910000</td>
+                            <td class="remain remainTd currency">1008324</td>
+                            <td class="creditTotal creditTotalTd currency">1910000</td>
                         </tr>
                         <tr>
                             <td class="detail detailTd">쿠팡</td>
-                            <td class="expense expenseTd">123423</td>
+                            <td class="expense expenseTd currency">123423</td>
                             <td class="creditCard creditCardTd">삼성</td>
                             <td class="dividMonth dividMonthTd">36</td>
                             <td class="creditCount creditCountTd">12</td>
-                            <td class="remain remainTd">1008324</td>
-                            <td class="creditTotal creditTotalTd">1910000</td>
+                            <td class="remain remainTd currency">1008324</td>
+                            <td class="creditTotal creditTotalTd currency">1910000</td>
                         </tr>
                         <tr>
                             <td class="detail detailTd">쿠팡</td>
-                            <td class="expense expenseTd">123423</td>
+                            <td class="expense expenseTd currency">123423</td>
                             <td class="creditCard creditCardTd">삼성</td>
                             <td class="dividMonth dividMonthTd">36</td>
                             <td class="creditCount creditCountTd">12</td>
-                            <td class="remain remainTd">1008324</td>
-                            <td class="creditTotal creditTotalTd">1910000</td>
+                            <td class="remain remainTd currency">1008324</td>
+                            <td class="creditTotal creditTotalTd currency">1910000</td>
                         </tr>
                     </tbody>
+                    <tfoot>
+
+                        <tr id="creditD"  style="display:none;">
+                            <td class="detail detailTd" >
+                                <input type="text" name="detail" id="creditDdetail">
+                            </td>
+                            <td class="expense expenseTd">
+                                <input type="number" name="expense" id="creditDexpense" value="0">
+                            </td>
+                            <td class="creditCard creditCardTd">
+                                <select name="way" id="creditDcard">
+                                    <option>카드선택</option>
+                                    <option th:each="way : ${state.assets}" th:if="${way.type.equals('credit')}" th:value="${way.name}" th:text="${way.name}"></option>
+                                </select>
+                            </td>
+                            <td class="dividMonth dividMonthTd">
+                                <input type="number" name="plan" id="creditDmonth">
+                            </td>
+                            <td class="creditCount creditCountTd">
+                                <input type="number" name="count" id="creditDcount">
+                            </td>
+                            <td class="remain remainTd">
+                                <input type="number" name="remain" id="creditDmain">
+                            </td>
+                            <td class="creditTotal creditTotalTd">
+                                <input type="number" name="total" id="creditDtotal">
+                            </td>
+                        </tr>
+    
+                    </tfoot>
                 </table>
             </div>
         </div>
@@ -343,6 +373,33 @@
                         <td class="loansBalance">2,344,354</td>
                     </tr>
                 </tbody>
+                <tfoot>
+                    <form name="loansFm" id="loansFm" method="post" action="/loansKeep">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+                        <input type="hidden" name="year">
+                        <input type="hidden" name="month">
+                        <tr id="loansInput" style="display:none;">
+                            <td class="loansDate">
+                                <input type="number" name="date" id="loandate">
+                            </td>
+                            <td class="loansBank">
+                                <input type="text" name="finance" id="loanbank">
+                            </td>
+                            <td class="loansPayment">
+                                <input type="number" name="expense" id="loanpayment" value="0">
+                            </td>
+                            <td class="loansCount">
+                                <input type="number" name="count" id="loancount">
+                            </td>
+                            <td class="loansAccount">
+                                <input type="text" name="payment" id="loanaccount">
+                            </td>
+                            <td class="loansBalance">
+                                <input type="number" name="balance" id="loanbalance" value="0">
+                            </td>
+                        </tr>
+                    </form>
+                </tfoot>
             </table>
         </div>
 
@@ -358,10 +415,10 @@
                         <li>우리</li>
                     </ul>
                     <ul class="totalMoney">
-                        <li>419,236</li>
-                        <li>621,054</li>
-                        <li>2,305,435</li>
-                        <li>843,958</li>
+                        <li class="currency">419,236</li>
+                        <li class="currency">621,054</li>
+                        <li class="currency">2,305,435</li>
+                        <li class="currency">843,958</li>
                     </ul>
                     <ul class="totalTitle">
                         <li>지출 총 합계</li>
@@ -369,9 +426,9 @@
                         <li>남은 금액</li>
                     </ul>
                     <ul class="totalMoney">
-                        <li>2,304,295</li>
-                        <li>6,784,493</li>
-                        <li>3,456,123</li>
+                        <li class="currency">2,304,295</li>
+                        <li class="currency">6,784,493</li>
+                        <li class="currency">3,456,123</li>
                     </ul>
                 </div>
                 <div class="nowInvestment">
@@ -382,9 +439,9 @@
                         <li>청약</li>
                     </ul>
                     <ul class="totalMoney">
-                        <li>0</li>
-                        <li>0</li>
-                        <li>0</li>
+                        <li  class="currency">0</li>
+                        <li class="currency">0</li>
+                        <li class="currency">0</li>
                     </ul>
                 </div>
                 <div class="nowBalanse">
@@ -424,79 +481,23 @@
         }
     });
 
-    $("#creditDivAdd").on("click",function(){
-        if( $(".creditDivision tbody").find("#creditD").length ==0 ){
-            $(".creditDivision tbody").append(
-                `<tr id="creditD">
-                    <td class="detail detailTd">
-                        <input type="text" name="creditDdetail" id="creditDdetail">
-                    </td>
-                    <td class="expense expenseTd">
-                        <input type="number" name="creditDexpense" id="creditDexpense" value="0">
-                    </td>
-                    <td class="creditCard creditCardTd">
-                        <input type="text" name="creditDcard" id="creditDcard">
-                    </td>
-                    <td class="dividMonth dividMonthTd">
-                        <input type="number" name="creditDmonth" id="creditDmonth">
-                    </td>
-                    <td class="creditCount creditCountTd">
-                        <input type="number" name="creditDcount" id="creditDcount">
-                    </td>
-                    <td class="remain remainTd">
-                        <input type="number" name="creditDremain" id="creditDmain">
-                    </td>
-                    <td class="creditTotal creditTotalTd">
-                        <input type="number" name="creditDtotal" id="creditDtotal">
-                    </td>
-                </tr>`
-            );
-            $("#creditD").on("keyup",function(e){
+    
+    $("#creditD").on("keyup",function(e){
                 if(e.keyCode == 13){
                     alert("카드분할");
                 }
-            });
-        }else{
-            $("#creditD").remove();
-            $(".creditDivision tbody")
-        }
-
     });
+       
+    $("#creditDivAdd").on("click",function(){ $("#creditD").toggle(); });
+    $("#loansAdd").on("click",function(){ $("#loansInput").toggle(); });
 
-    $("#loansAdd").on("click",function(){
-        if( $(".loansTable tbody").find("#loansInput").length ==0 ){
-            $(".loansTable tbody").append(
-                `<tr id="loansInput">
-                    <td class="loansDate">
-                        <input type="number" name="loandate" id="loandate">
-                    </td>
-                    <td class="loansBank">
-                        <input type="text" name="loanbank" id="loanbank">
-                    </td>
-                    <td class="loansPayment">
-                        <input type="number" name="loanpayment" id="loanpayment" value="0">
-                    </td>
-                    <td class="loansCount">
-                        <input type="number" name="loancount" id="loancount">
-                    </td>
-                    <td class="loansAccount">
-                        <input type="text" name="loanaccount" id="loanaccount">
-                    </td>
-                    <td class="loansBalance">
-                        <input type="number" name="loanbalance" id="loanbalance" value="0">
-                    </td>
-                </tr>`
-            );
-            $("#loansInput").on("keyup",function(e){
+
+    
+    $("#loansInput").on("keyup",function(e){
                 if(e.keyCode == 13){
                     alert("카드분할");
                 }
-            });
-        }else{
-
-            $("#loansInput").remove();
-
-        }
     });
+        
 
 </script>
