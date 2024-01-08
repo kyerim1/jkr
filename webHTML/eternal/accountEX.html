@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/static/favicon.ico">
+  <title>KR_REC</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link th:href="@{/static/css/init.css}"  rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <link  th:href="@{/static/css/account.css}"  rel="stylesheet">
+  <script th:src="@{/static/js/account.js}" ></script>
+</head>
+<body>
+<div th:replace="header::header"></div>
+<div id="content">
+  <div class="accountCtl"><button class="accountDel">삭제</button></div>
+  <div id="assetsReg">
+
+    <div class="myassets">
+      <h3 class="assetsTitle">체크카드</h3>
+      <table class="checkTb assetsTb">
+        <thead>
+        <tr>
+          <th>카드명</th>
+          <th>연결계좌</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr th:each="check : ${checks}" th:id="${check.name}">
+            <td th:text="${check.name}" th:data-id="${check.id}"></td>
+            <td class="linePoint1" th:text="${check.linkBank}"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+        <tr id="checkInput">
+          <td>
+            <input type="text" name="checkcard" id="checkcard">
+          </td>
+          <td>
+            <select id="linkbank1">
+              <option>은행선택</option>
+              <option th:each="bank : ${banks}" th:value="${bank.name}" th:text="${bank.name}"></option>
+            </select>
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="myassets">
+      <h3 class="assetsTitle">은행</h3>
+      <table class="bankTb assetsTb">
+        <thead>
+        <tr>
+          <th>은행</th>
+          <th>잔액</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr th:each="bank : ${banks}" th:id="${bank.name}">
+            <td th:text="${bank.name}" th:data-id="${bank.id}"></td>
+            <td class="currency currencyActive" th:text="${bank.money}"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+        <tr id="bankInput">
+          <td>
+            <input type="text" name="bank" id="bank">
+          </td>
+          <td>
+            <input type="number" name="money" id="money">
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="myassets">
+      <h3 class="assetsTitle">신용카드</h3>
+      <table class="creditTb assetsTb">
+        <thead>
+        <tr>
+          <th>카드사</th>
+          <th>연결계좌</th>
+          <th>결제일</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr th:each="credit : ${credits}" th:id="${credit.name}">
+            <td th:text="${credit.name}" th:data-id="${credit.id}"></td>
+            <td class="linePoint2" th:text="${credit.linkBank}"></td>
+            <td class="dateMark dateMarkActive" th:text="${credit.paymentDay}"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+        <tr id="creditInput">
+          <td>
+            <input type="text" name="creditcard" id="creditcard">
+          </td>
+          <td>
+            <select id="linkbank2">
+              <option>은행선택</option>
+              <option th:each="bank : ${banks}" th:value="${bank.name}" th:text="${bank.name}"></option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="paymentday" id="paymentday">
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  </div>
+</div>
+<div th:replace="footer::footer"></div>
+</body>
+</html>
